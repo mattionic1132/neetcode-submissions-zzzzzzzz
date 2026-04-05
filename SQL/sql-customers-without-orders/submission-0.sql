@@ -1,0 +1,7 @@
+-- Write your query below
+SELECT name
+FROM customers AS c
+WHERE c.id NOT IN (
+    SELECT o.customer_id
+    FROM orders AS o
+);
